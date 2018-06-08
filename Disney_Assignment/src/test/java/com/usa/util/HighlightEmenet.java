@@ -7,17 +7,17 @@ import org.openqa.selenium.WebElement;
 
 public class HighlightEmenet {
 
-	public static void drawBorder(WebDriver driver, String xpath){
+	public static void drawBorderRed(WebDriver driver, String xpath){
     WebElement element_node = driver.findElement(By.xpath(xpath));
     JavascriptExecutor jse = (JavascriptExecutor) driver;
     jse.executeScript("arguments[0].style.border='3px solid red'", element_node);
     }
-	public static void drawBorder(WebDriver driver, WebElement webelement){
+	public static void drawBorderGreen(WebDriver driver, WebElement webelement){
     WebElement element_node = webelement;
     JavascriptExecutor jse = (JavascriptExecutor) driver;
     jse.executeScript("arguments[0].style.border='3px solid green'", element_node);
     }
-	public static void drawBorderyellow(WebDriver driver, WebElement webelement){
+	public static void drawBorderYellow(WebDriver driver, WebElement webelement){
     WebElement element_node = webelement;
     JavascriptExecutor jse = (JavascriptExecutor) driver;
     jse.executeScript("arguments[0].style.border='3px solid yellow", element_node);

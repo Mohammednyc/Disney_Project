@@ -8,8 +8,8 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-import com.usa.util.screenShot;
 
+import com.usa.util.screenShot;
 
     public class PageObjectClass  {
     WebDriver driver;
@@ -17,91 +17,94 @@ import com.usa.util.screenShot;
     this.driver = driver;
     PageFactory.initElements(driver,this);
 	}
+    
     @FindBy(how = How.XPATH, using = ".//*[@id='checkInDate_display']")
     @CacheLookup
-    WebElement SelectDateButton;
+    private WebElement SelectDateButton;
     public WebElement SelectDateButton() {
     return SelectDateButton;
 	}
 	@FindBy(how = How.XPATH, using = "//*[@id='5_16_2018']/div/span")
     @CacheLookup
-    WebElement SelectFirstDate;
+    private WebElement SelectFirstDate;
     public WebElement SelectFirstDate() {
     return SelectFirstDate;
     }
     @FindBy(how = How.XPATH, using = "//*[@id=\"5_18_2018\"]/div/span")
     @CacheLookup
-    WebElement SelectSecondDate;
+    private WebElement SelectSecondDate;
     public WebElement SelectSecondDate() {
     return SelectSecondDate;
     }
     @FindBy(how = How.XPATH, using = ".//*[@id='qqForm_adultCount']/button[1]")
     @CacheLookup
-    WebElement SelectFirstAdult;
+    private WebElement SelectFirstAdult;
     public WebElement SelectFirstAdult() {
     return SelectFirstAdult;
     }
     @FindBy(how = How.XPATH, using = ".//*[@id='qqForm_adultCount']/button[2]")
     @CacheLookup
-    WebElement SelectSecondAdult;
+    private WebElement SelectSecondAdult;
     public WebElement SelectSecondAdult() {
     return SelectSecondAdult;
     }
     @FindBy(how = How.XPATH, using = "//*[@id='qqForm_childCount']/button[2]/span/wdpr-icon/span")
     @CacheLookup
-    WebElement SelectFirstChild;
+    private WebElement SelectFirstChild;
     public WebElement SelectFirstChild() {
     return SelectFirstChild;
     }
     @FindBy(how = How.XPATH, using = "//*[@id='partyMixSelectChildAge1']/div/div/wdpr-uiplus-select-box/ol/button/span[2]")
     @CacheLookup
-    WebElement SelectDrup;
+    private WebElement SelectDrup;
     public WebElement SelectDrup() {
     return SelectDrup;
     }
     @FindBy(how = How.XPATH, using = "//*[@id='partyMixSelectChildAge1']/div/div/wdpr-uiplus-select-box/ol/div/ul/li[7]/a/div")
     @CacheLookup
-    WebElement SelectFirstChildAge;
+    private WebElement SelectFirstChildAge;
     public WebElement SelectFirstChildAge() {
     return SelectFirstChildAge;
     }
     @FindBy(how = How.XPATH, using = "//*[@id='qqForm_childCount']/button[2]/span/wdpr-icon/span")
     @CacheLookup
-    WebElement SelectSecondChild;
+    private WebElement SelectSecondChild;
     public WebElement SelectSecondChild() {
     return SelectSecondChild;
     }
     @FindBy(how = How.XPATH, using = "//*[@id='partyMixSelectChildAge2']/div/div/wdpr-uiplus-select-box/ol/button/span[2]")
     @CacheLookup
-    WebElement SelectDrup2;
+    private WebElement SelectDrup2;
     public WebElement SelectDrup2() {
     return SelectDrup2;
     }
     @FindBy(how = How.XPATH, using = "//*[@id='partyMixSelectChildAge2']/div/div/wdpr-uiplus-select-box/ol/div/ul/li[14]/a/div/span")
     @CacheLookup
-    WebElement SelectSecondChildAge;
+    private WebElement SelectSecondChildAge;
     public WebElement SelectSecondChildAge() {
     return SelectSecondChildAge;
     }
     @FindBy(how = How.XPATH, using = ".//*[@id='selectDestination']/ol/button")
     @CacheLookup
-    WebElement SelectAllResortHotels;
+    private WebElement SelectAllResortHotels;
     public WebElement SelectAllResortHotels() {
     return SelectAllResortHotels;
     }
     @FindBy(how = How.XPATH, using = "//*[@id='selectDestination']/ol/div/ul/li[1]/a/div/span")
     @CacheLookup
-    WebElement SelectAllresortButton;
+    private WebElement SelectAllresortButton;
     public WebElement SelectAllresortButton() {
     return SelectAllresortButton;
     }
     @FindBy(how = How.XPATH, using = "//*[@id='findPricesButton']")
     @CacheLookup
-    WebElement SelectFindResort;
+    private WebElement SelectFindResort;
     public WebElement SelectFindResort() {
     return SelectFindResort;
     }
-    WebElement FindThirdResort;
+    
+    
+    private WebElement FindThirdResort;
     public WebElement FindThirdResort() {
     List<WebElement> AllHotel= driver.findElements(By.xpath("//a[contains(@href,'') and @class=' cardLinkOverlay lowOverlay']"));
     System.out.println(AllHotel.size()+ "<<<<<<<<total hotel>>>>>>>>>>>");
@@ -113,7 +116,9 @@ import com.usa.util.screenShot;
     break; }}
 	return FindThirdResort;
     }
-    WebElement FindunavailableRoom;
+    
+    
+    private WebElement FindunavailableRoom;
     public WebElement FindunavailableRoom() throws Exception {
     Thread.sleep(2500);
     // This condition for find the unavailable room
@@ -126,7 +131,9 @@ import com.usa.util.screenShot;
     }
 	return FindunavailableRoom;
 	}
-    WebElement FindavailableRoom;
+    
+    
+    private WebElement FindavailableRoom;
     public WebElement FindavailableRoom() throws InterruptedException{
     List<WebElement> AllRoom= driver.findElements(By.xpath(".//span[text()='Select']"));
     System.out.println(AllRoom.size()+ "<<<<<<<<Total Available Room<<<<<<<<<<");
@@ -140,54 +147,57 @@ import com.usa.util.screenShot;
     System.out.println(">>>>>>>>>>Congratulations finding room<<<<<<<<<<< ");
 	return FindavailableRoom;
     }
+    
+    
+    
     @FindBy(how = How.XPATH, using = ".//*[@id='packageTicketNumberOfDaysid-base']/div/span[2]/div")
     @CacheLookup
-    WebElement UpdateTicket;
+    private WebElement UpdateTicket;
     public WebElement UpdateTicket() {
     return UpdateTicket;
     }
     @FindBy(how = How.XPATH, using = ".//*[@id='packageTicketOptionsid-base']/div/span[2]/div")
     @CacheLookup
-    WebElement UpdateParkHopper;
+    private WebElement UpdateParkHopper;
     public WebElement UpdateParkHopper() {
     return UpdateParkHopper;
     }
     @FindBy(how = How.XPATH, using = "//*[@id=\"continueButton\"]")
     @CacheLookup
-    WebElement ClickContnueButton;
+    private WebElement ClickContnueButton;
     public WebElement ClickContnueButton() {
     return ClickContnueButton;
     }
     @FindBy(how = How.XPATH, using = "//*[@id=\"continueButton\"]")
     @CacheLookup
-    WebElement ClickAgainContnueButton;
+    private WebElement ClickAgainContnueButton;
     public WebElement ClickAgainContnueButton() {
     return ClickAgainContnueButton;
     }
     @FindBy(how = How.XPATH, using = ".//span[text()='Add Ground']")
     @CacheLookup
-    WebElement ClickGroundTransportation;
+    private WebElement ClickGroundTransportation;
     public WebElement ClickGroundTransportation() {
     return ClickGroundTransportation;
     }
     @FindBy(how = How.XPATH, using = ".//*[@id='doneButton']")
     @CacheLookup
-    WebElement ClickNextButton;
+    private WebElement ClickNextButton;
     public WebElement ClickNextButton() {
     return ClickNextButton;
     }
     @FindBy(how = How.XPATH, using = ".//*[@id='doneButton']")
     @CacheLookup
-    WebElement ClickDoneButton;
+    private WebElement ClickDoneButton;
     public WebElement ClickDoneButton() {
     return ClickDoneButton;
     }
-    WebElement VerifyComplimentary;
+    private WebElement VerifyComplimentary;
     public WebElement VerifyComplimentary() {
     System.out.println(driver.findElement(By.xpath("//*[@id=\"vacationOfferContainer\"]/table/tbody/tr[8]/td[3]/span")).getText()+">>>>>>>>Complimentary<<<<<<<<");	
     return VerifyComplimentary;
     }
-    WebElement TakeScreenShot;
+    private WebElement TakeScreenShot;
     public WebElement TakeScreenShot() throws Exception {
     screenShot.captureScreenShot(driver,"Ground Transportation line\r\n" + "Take a screenshot");
     System.out.println(">>>>>>>>>Take Screenshort Ground Transportation<<<<<<<<<");	
@@ -195,17 +205,17 @@ import com.usa.util.screenShot;
     }
     @FindBy(how = How.XPATH, using = "//*[@id=\"openDialogvacationoffer\"]/div")
     @CacheLookup
-    WebElement RemoveCartClick;
+    private WebElement RemoveCartClick;
     public WebElement RemoveCartClick() {
     return RemoveCartClick;
     }
     @FindBy(how = How.XPATH, using = "//*[@id=\"removeButtonvacationoffer\"]/span/span")
     @CacheLookup
-    WebElement FinalRemoveCartClick;
+    private WebElement FinalRemoveCartClick;
     public WebElement FinalRemoveCartClick() {
     return FinalRemoveCartClick;
     }
-    WebElement TakeScreenShotAgain;
+    private WebElement TakeScreenShotAgain;
     public WebElement TakeScreenShotAgain() throws Exception {
     screenShot.captureScreenShot(driver,"Empty Cart\r\n" + "Take a screenshot");
     System.out.println(">>>>>>>>>TakeScreen short Empty cart<<<<<<<<<");

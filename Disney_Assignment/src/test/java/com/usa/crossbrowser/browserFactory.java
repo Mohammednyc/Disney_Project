@@ -8,7 +8,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
         public class browserFactory {
-	    private static String URL="https://disneyworld.disney.go.com/";
+	    public static String URL="https://disneyworld.disney.go.com/";
 	    public static WebDriver getBrowser(String browserName,WebDriver driver) throws InterruptedException{
 		
 		if(browserName.equalsIgnoreCase("IE")){

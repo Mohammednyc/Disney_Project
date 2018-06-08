@@ -12,7 +12,7 @@ import org.openqa.selenium.WebDriver;
 public class screenShot {
 
 	    public static String captureScreenShot(WebDriver driver, String ScreenShotName) throws Exception{
-	   TakesScreenshot ts =(TakesScreenshot)driver;
+	    TakesScreenshot ts =(TakesScreenshot)driver;
 		File source=ts.getScreenshotAs(OutputType.FILE);
 		String currentDir = System.getProperty("user.dir");
 		DateFormat dateFormat = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");
@@ -20,7 +20,7 @@ public class screenShot {
 	    String dateTime = dateFormat.format(date.getTime());
 		//String destination=".//RCO_Regression/Screenshot"+ScreenShotName+"-"+dateTime+".png";
 		String destination=currentDir +"\\Regression Report output\\ScreenShots\\"+dateTime+"\\" +ScreenShotName + ".png";
-		FileUtils.copyFile(source, new File("./Screenshort/Ground Transportation.png"));
+		FileUtils.copyFile(source, new File("./Regression Report output\\ScreenShots/Ground Transportation.png"));
 		return destination;
 	    }}
 
