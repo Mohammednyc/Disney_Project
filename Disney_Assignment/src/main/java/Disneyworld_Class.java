@@ -27,11 +27,11 @@ import com.usa.util.screenShot;
 	//HighlightEmenet.drawBorder(driver, ".//*[@id='checkInDate_display']");
 	
 	// Set the  First Date 
-	driver.findElement(By.xpath("//*[@id='5_16_2018']/div/span")).click(); 
+	driver.findElement(By.xpath("//*[@id='6_16_2018']/div/span")).click(); 
 	Thread.sleep(3000);
 	// set the Second Date
 	//WebElement element1 = wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//*[@id='5_17_2018']/div/span")).click()));
-    driver.findElement(By.xpath("//*[@id='5_17_2018']/div/span")).click();
+    driver.findElement(By.xpath("//*[@id='6_17_2018']/div/span")).click();
     
     
     

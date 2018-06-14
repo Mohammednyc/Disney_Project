@@ -24,13 +24,13 @@ import com.usa.util.screenShot;
     public WebElement SelectDateButton() {
     return SelectDateButton;
 	}
-	@FindBy(how = How.XPATH, using = "//*[@id='5_16_2018']/div/span")
+	@FindBy(how = How.XPATH, using = "//*[@id=\"8_16_2018\"]/div")
     @CacheLookup
     private WebElement SelectFirstDate;
     public WebElement SelectFirstDate() {
     return SelectFirstDate;
     }
-    @FindBy(how = How.XPATH, using = "//*[@id=\"5_18_2018\"]/div/span")
+    @FindBy(how = How.XPATH, using = "//*[@id=\"8_17_2018\"]/div/span")
     @CacheLookup
     private WebElement SelectSecondDate;
     public WebElement SelectSecondDate() {

@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.usa.crossbrowser.Snippet">
+      <class name="Disneyworld_Class">
         <methods>
-          <include name="mytest"/>
+          <include name="Test"/>
         </methods>
-      </class> <!-- com.usa.crossbrowser.Snippet -->
+      </class> <!-- Disneyworld_Class -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

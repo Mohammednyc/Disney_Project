@@ -91,7 +91,7 @@ import cucumber.api.java.en.When;
     @When("^user able to click available room$")
 	public void user_able_to_click_available_room() throws Throwable {
 	
-		obj.FindavailableRoom();
+		 obj.FindavailableRoom();
 	}
 
 	@When("^User selects any ticket option$")
